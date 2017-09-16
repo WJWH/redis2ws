@@ -3,7 +3,7 @@ require "kemal"
 require "redis"
 
 module Redis2ws
-  SOCKETS = [] of HTTP::WebSocket
+  SOCKETS = [] of HTTP::WebSocket # which type are the objects in this empty list :O
   
   #run redis subscriber in its own fiber
   spawn do
@@ -18,13 +18,10 @@ module Redis2ws
   
   # The Kemal app, pretty straightforward.
   
-  # For root and /app.js we just hardcode some paths. You should probably use a nicer way for this.
+  # While static files get served from the /public directory, this doesn't work for calls to `/`, so
+  # we have to hardcode that one.
   get "/" do |ctx|
-    send_file ctx, "src/web/index.html"
-  end
-  
-  get "/app.js" do |ctx|
-    send_file ctx, "src/web/app.js"
+    send_file ctx, "public/index.html"
   end
   
   ws "/eventstream/" do |socket|
