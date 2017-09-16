@@ -1,27 +1,21 @@
 # redis2ws
 
-TODO: Write a description here
+This repo contains a (very simple) example of passing messages from Redis pubsub to websocket connections.
 
 ## Installation
 
-TODO: Write installation instructions here
+You'll need the `kemal` and `redis` shards for this to work. Running `shards install` in the repo directory should "just work". 
 
 ## Usage
 
-TODO: Write usage instructions here
+Make sure you have Redis installed and a Redis server running locally on the default port. Clone this repo and move into its directory, then run `crystal src/redis2ws.cr`. Navigate a browser to `localhost:3000`. Use your preferred means of publishing messages to the Redis pubsub channel `mychannel` (in redis-cli, you can use `publish mychannel mymessage`). Observe the message you published appear in the browser window.
 
-## Development
-
-TODO: Write development instructions here
+That is all it does so far.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/redis2ws/fork )
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
-5. Create a new Pull Request
+I'm not really looking for contributions at this point, this project is simply about playing around with tech I find interesting. Feel free to take inspiration from the code though, that is why it is public in the first place. :) 
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Wander Hillen - creator, maintainer
+- [[WJWH]](https://github.com/WJWH) Wander Hillen - creator, maintainer
