@@ -1,0 +1,20 @@
+name: redis2ws
+version: 0.1.0
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  redis:
+    github: stefanwille/crystal-redis
+    version: ~> 1.9.0
+
+authors:
+  - Wander Hillen <wjw.hillen@gmail.com>
+
+targets:
+  redis2ws:
+    main: src/redis2ws.cr
+
+crystal: 0.23.1
+
+license: MIT
