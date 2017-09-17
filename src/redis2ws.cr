@@ -1,9 +1,10 @@
-#require "./redis2ws/*"
+require "./redis2ws/*"
 require "kemal"
 require "redis"
 
 module Redis2ws
   SOCKETS = [] of HTTP::WebSocket # which type are the objects in this empty list :O
+
   
   #run redis subscriber in its own fiber
   spawn do
@@ -25,7 +26,7 @@ module Redis2ws
   end
   
   ws "/eventstream/" do |socket|
-    # Add the client to SOCKETS list
+    # Add the client to sockets list
     SOCKETS << socket
 
     # Broadcast each message to all clients
@@ -42,5 +43,3 @@ module Redis2ws
   
   Kemal.run
 end
-
-

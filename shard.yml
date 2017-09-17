@@ -2,11 +2,17 @@ name: redis2ws
 version: 0.1.0
 
 dependencies:
+  spec-kemal:
+    github: kemalcr/spec-kemal
+    branch: master
   kemal:
     github: kemalcr/kemal
   redis:
     github: stefanwille/crystal-redis
     version: ~> 1.9.0
+  mocks:
+    github: waterlink/mocks.cr
+    version: ~> 0.9
 
 authors:
   - Wander Hillen <wjw.hillen@gmail.com>

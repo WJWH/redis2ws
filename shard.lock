@@ -8,6 +8,10 @@ shards:
     github: jeromegn/kilt
     version: 0.4.0
 
+  mocks:
+    github: waterlink/mocks.cr
+    version: 0.9.5
+
   radix:
     github: luislavena/radix
     version: 0.3.8
@@ -15,4 +19,12 @@ shards:
   redis:
     github: stefanwille/crystal-redis
     version: 1.9.0
+
+  singleton:
+    github: waterlink/singleton.cr
+    version: 1.0.0
+
+  spec-kemal:
+    github: kemalcr/spec-kemal
+    commit: 05cc810f5f5ed890f16bcb06461000b97c625959
 
