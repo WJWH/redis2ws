@@ -1,6 +1,6 @@
 # redis2ws
 
-This repo contains a (very simple) example of passing messages from Redis pubsub to websocket connections.
+This repo contains a (very simple) example of passing messages from Redis pubsub to websocket connections. It also serves as an experimentation repo for making tiny docker images for Crystal microservices. It compiles down to a Docker image 11.3 MB in size (but does not work without extra config because then it can't find Redis).
 
 ## Installation
 
