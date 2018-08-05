@@ -1,11 +1,11 @@
 FROM crystallang/crystal:latest
 
-ADD . /src
-WORKDIR /src
+ADD . .
 RUN shards build --production --static
 
-# busybox:glibc contains enough to allow a statically compiled 
+# busybox:glibc contains enough to allow a statically compiled crystal binary to run
 FROM busybox:glibc
-COPY --from=0 /src/bin/redis2ws /redis2ws
+COPY --from=0 /bin /app
+COPY --from=0 /public /app/public
 EXPOSE 3000
-ENTRYPOINT ["/redis2ws"]
+ENTRYPOINT ["/app/redis2ws"]
